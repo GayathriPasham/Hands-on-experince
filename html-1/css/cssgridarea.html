@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example2</title>
+    <style>
+         .parent{
+            background-color: rgb(47, 59, 195);
+            gap: 10px;
+            
+         }
+         .item{
+            display: grid;
+             grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(6, 80px );
+           grid-template-areas:"null null null 0 "
+                                 "ac del slash mul"
+                                 "sev eig nin sub"
+                                "six five four plus"
+                                "three two one eq"
+                                " zero zero dot eq";
+         }
+         .null{
+          grid-area: null;
+          background-color: black;
+          color: white;
+         }
+         .ac{
+          grid-area: ac;
+          background-color: orange;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .del{
+          grid-area: del;
+          background-color: orange;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .slash{
+          grid-area: slash;
+          background-color: orange;
+          margin-right: 10px;
+         margin-bottom: 10px;
+         }
+         .mul{
+          grid-area: mul;
+          background-color: orange;
+          margin-right: 10px;
+          margin-bottom: 10px;
+        
+         }
+         .sev{
+          grid-area: sev;
+          background-color: gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .eig{
+          grid-area: eig;
+          background-color: grey;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .nin{
+          grid-area: nin;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .six{
+          grid-area: six;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .five{
+          grid-area: five;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .four{
+          grid-area:four;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .three{
+          grid-area: three;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .two{
+          grid-area:two;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .one{
+          grid-area:one;
+          background-color:gray;
+          margin-right: 10px;
+          margin-bottom: 10px;
+         }
+         .sub{
+          grid-area: sub;
+          background-color: orange;
+          margin-bottom: 10px;
+          margin-right: 10px;
+         }
+         .eq{
+          grid-area: eq;
+          background-color: orange;
+          margin-right: 10px;
+          margin-top: 10px;
+          
+          
+
+         }
+         .zero{
+          grid-area: zero;
+          background-color: gray;
+           margin-right: 10px;
+
+         }
+         .dot{
+          grid-area: dot;
+          background-color: gray;
+          margin-right: 10px;
+         
+         }
+         .plus{
+          grid-area: plus;
+          background-color: orange;
+         padding-top: 10px;
+          margin-right: 10px;
+        
+          
+         }
+         
+         
+    </style>
+       
+</head>
+<body>
+<div class="grid-container">
+    <div class="item">
+    <div class="ac">Ac</div>
+    <div class="del">DEL</div>
+    <div class="slash">/</div>
+    <div class="mul">*</div>
+    <div class="sev">7</div>
+     <div class="eig">8</div>
+      <div class="nin">9</div>
+     <div class="sub">-</div>
+      <div class="six">6</div>
+      <div class="five">5</div>
+      <div class="four">4</div>
+      <div class="plus">+</div>
+      <div class="three">3</div>
+      <div class="two">2</div>
+      <div class="one">1</div>
+      
+      
+      <div class="zero">0</div>
+      <div class="dot">.</div>  
+      <div class="eq">=</div>    
+
+    
+
+    </div>
+    
+</div>
+</body>
+</html>

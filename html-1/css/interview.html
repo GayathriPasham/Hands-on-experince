@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      .container {
+        max-width: 90vw;
+        margin: auto;
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+      h1,
+      h2 {
+        color: #2c3e50;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+      details {
+        background: #e8f9fc;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border-left: 5px solid #3498db;
+        transition: all 0.3s ease-out;
+      }
+      h3,
+      summary {
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        color: #2980b9;
+      }
+      details[open] {
+        background: #f8fbff;
+      }
+      .answer {
+        padding-top: 15px;
+        margin-left: 20px;
+        color: #34495e;
+      }
+      code {
+        background-color: #e8e8e8;
+        padding: 2px 5px;
+        border-radius: 3px;
+        font-family: "Courier New", Courier, monospace;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+   <h1>CSS Flexbox Interview Questions & Answers</h1>
+    </div>
+    <div class="question">
+     <h3>1.What is Flexbox and why it is used?</h3>
+    </div>
+    <details class="answer">
+        <summary>Answer</summary>
+    <p>Flexbox is a one-dimensional layout method for arranging items in rows or columns</p>
+    <p>The purpose of flexbox — flexibly lay out a set of block or inline elements in one dimension.</p>
+    <p>Flex terminology — flex container, flex item, main axis, and cross axis.</p>
+    </details>
+    <div class="question">
+         <h3>2. What are the two main axes in Flexbox?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p><code> main-axis:</code>The main axis is defined by flex-direction, which has four possible values:</p>
+        <ul>
+            <li><code>rows</code></li>
+            <li><code>row-reverse</code></li>
+            <li><code>column</code></li>
+            <li><code>column-reverse</code></li>
+        </ul>
+      <p><code>cross axis:</code>The cross axis run perpendicular to the main axis</p>
+      </details>
+      <div class="question">
+        <h3>3.  How do you make an element a flex container?</h3>
+        <details>
+            <summary>Answer</summary>
+            <p>we have to use display properties to make an element a flex container either <code>flex</code>or<code>inline-flex</code></p>
+        </details>
+       </div>
+       <div class="question">
+        <h3>
+          4. Explain the difference between <code>display: flex;</code> and
+          <code>display: inline-flex;</code>.
+        </h3>
+
+       </div> 
+       <details>
+        <summary>Answer</summary>
+        <p><code>display:flex;&rarr;</code>The flex container
+            itself behaves as a block-level element, taking up the full
+            available width and forcing a line break after it.</p>
+        <p><code>display:inline-flex;&rarr;</code>The flex
+            container itself behaves as an inline-level element, only taking up
+            the necessary width and allowing other inline elements to sit
+            alongside it.</p>
+       </details>  
+       <div class="question">
+        <h3>
+          5. What is <code>flex-direction</code> and what are its possible
+          values?
+        </h3>
+        </div>
+        <details>
+          <summary>Answer</summary>
+          <p>The flex-direction CSS property sets how flex items are placed in the flex container defining the main axis and the direction (normal or reversed).</p>
+          <p>The possible values are:</p>
+          <ul>
+            <li><code>row</code>
+             <p> By default row will locate the flex items side by side</li></p>
+            <li>row-reverse
+              <p>To reverse the order of elements in CSS using flexbox</p>
+            </li>
+            <li>column
+              <p>Flex items are laid out in a column (top to bottom).</p>
+            </li>
+            <li>column-reverse
+              <p>Flex items are laid out in a column in reverse order (bottom to top).</p>
+            </li>
+
+          </ul>
+        </details>
+        <div class="question">
+        <h3>6. What is <code>justify-content</code> and how does it work?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>justify-content</code> property defines how flex items are
+          distributed along the <strong>main axis</strong> of the flex
+          container, after accounting for any free space.
+        </p>
+        <p>Common values include:</p>
+        <ul>
+          <li>
+            <code>flex-start</code> (default): Items are packed towards the
+            start of the main axis.
+          </li>
+          <li>
+            <code>flex-end</code>: Items are packed towards the end of the main
+            axis.
+          </li>
+          <li><code>center</code>: Items are centered along the main axis.</li>
+          <li>
+            <code>space-between</code>: Items are evenly distributed with the
+            first item at the start and the last item at the end.
+          </li>
+          <li>
+            <code>space-around</code>: Items are evenly distributed with equal
+            space around them.
+          </li>
+          <li>
+            <code>space-evenly</code>: Items are evenly distributed with equal
+            space between them and equal space at the ends.
+          </li>
+        </ul>
+      </details>
+
+      <div class="question">
+        <h3>7. What is <code>align-items</code> and how does it work?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>align-items</code> property defines how flex items are
+          distributed along the cross axis of the flex
+          container.
+        </p>
+        <p>the values of align-items are:</p>
+        <ul>
+          <li>
+            <code>stretch</code> (default): Items are stretched to fill the
+            container (but still respect
+            <code>min-width</code>/<code>max-width</code>).
+          </li>
+          <li>
+            <code>flex-start</code>: Items are  start toward the
+            cross axis.
+          </li>
+          <li>
+            <code>flex-end</code>: Items are packed towards the end of the cross
+            axis.
+          </li>
+          <li><code>center</code>: Items are centered along the cross axis.</li>
+          <li>
+            <code>baseline</code>: Items are aligned such that their baselines
+            align.
+          </li>
+        </ul>
+      </details>
+
+      <div class="question">
+        <h3>8. Explain <code>flex-wrap</code> and its values.</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>flex-wrap</code> property specifies whether flex items are
+          forced into a single line or can wrap onto multiple lines.
+        </p>
+        <p>the values of flex-wrap:</p>
+        <ul>
+          <li>
+            <code>nowrap</code> (default): All flex items will be on one line.
+          </li>
+          <li>
+            <code>wrap</code>: Flex items will wrap onto multiple lines from top
+            to bottom.
+          </li>
+          <li>
+            <code>wrap-reverse</code>: Flex items will wrap onto multiple lines
+            from bottom to top.
+          </li>
+        </ul>
+      </details>
+
+      <div class="question">
+        <h3>
+          9. What is the shorthand property for <code>flex-direction</code> and
+          <code>flex-wrap</code>?
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>The shorthand property is <code>flex-flow</code>.</p>
+      
+      </details>
+
+      <div class="question">
+        <h3>10. What is <code>align-content</code> and when is it used?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+        The CSS align-content property sets the distribution of space between and around content items along a flexbox's cross axis, or a grid or block-level element's block axis.
+        </p>
+        <p>
+          It's similar to <code>justify-content</code> but for the cross axis
+          and only applies when there's wrapping. If there's only one line of
+          flex items, <code>align-content</code> has no effect.
+        </p>
+        <p>
+          Common values include <code>flex-start</code>, <code>flex-end</code>,
+          <code>center</code>, <code>space-between</code>,
+          <code>space-around</code>, <code>stretch</code> (default).
+        </p>
+      </details>
+
+      <div class="question">
+        <h3>
+          11. Explain the <code>flex</code> shorthand property for flex items.
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>flex</code> shorthand property sets the
+          <code>flex-grow</code>, <code>flex-shrink</code>, and
+          <code>flex-basis</code> properties on a flex item.
+        </p>
+        <ul>
+          <li>
+            <strong><code>flex-grow</code>:</strong> Defines the ability for a
+            flex item to grow if necessary (default is 0).
+          </li>
+          <li>
+            <strong><code>flex-shrink</code>:</strong> Defines the ability for a
+            flex item to shrink if necessary (default is 1).
+          </li>
+          <li>
+            <strong><code>flex-basis</code>:</strong> Defines the default size
+            of an element before any free space is distributed (default is
+            <code>auto</code>).
+          </li>
+        </ul>
+        <p>Examples:</p>
+        <ul>
+          <li>
+            <code>flex: 1;</code> is equivalent to
+            <code>flex: 1 1 0%;</code> (grow, shrink, and take up 0% basis, but
+            grow to fill available space).
+          </li>
+          <li>
+            <code>flex: auto;</code> is equivalent to
+            <code>flex: 1 1 auto;</code> (grow, shrink, and take up content
+            size).
+          </li>
+          <li>
+            <code>flex: none;</code> is equivalent to
+            <code>flex: 0 0 auto;</code> (do not grow, do not shrink, and take
+            up content size).
+          </li>
+        </ul>
+      </details>
+
+      <div class="question">
+        <h3>12. What is <code>flex-grow</code> and when would you use it?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>flex-grow</code> property specifies how much a flex item
+          will grow relative to the rest of the flex items in the container if
+          there is positive free space. A value of <code>1</code> means it will
+          take up an equal share of the remaining space. A value of
+          <code>2</code> means it will take up twice as much as an item with
+          <code>flex-grow: 1;</code>.
+        </p>
+        <p>
+          It's used when you want certain items to expand and fill available
+          space.
+        </p>
+      </details>
+
+      <div class="question">
+        <h3>13. What is <code>flex-shrink</code> and when is it useful?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The flex-shrink CSS property sets the flex shrink factor of a flex item.
+           If the size of all flex items is larger than the flex container, the flex items can shrink to fit according to their flex-shrink value.
+            Each flex line's negative free space is distributed between the line's flex items that have a flex-shrink value greater than 0.
+        </p>
+        
+      </details>
+
+      <div class="question">
+        <h3>14. What is <code>flex-basis</code>?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>flex-basis</code> property defines the initial size of a
+          flex item before any free space is distributed. It can be a length
+          (e.g., <code>200px</code>) or a keyword (e.g., <code>auto</code>,
+          which means the content's size).
+        </p>
+        <p>
+          It's essentially a more flexible way to set an item's width (or height
+          if <code>flex-direction</code> is <code>column</code>) within a flex
+          context, as it's considered before <code>flex-grow</code> or
+          <code>flex-shrink</code>.
+        </p>
+      </details>
+
+      <div class="question">
+        <h3>
+          15. How do you center an item both horizontally and vertically using
+          Flexbox?
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          To center an item both horizontally and vertically, you apply
+          <code>justify-content: center;</code> and
+          <code>align-items: center;</code> to the flex container.
+        </p>
+      
+      </details>
+
+      <div class="question">
+        <h3>
+          16. What is the <code>order</code> property and how does it work?
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>order</code> property controls the order in which flex items
+          appear in the flex container, overriding their source order. Items are
+          laid out in ascending order of their <code>order</code> value. Items
+          with the same <code>order</code> value are laid out in their source
+          order.
+        </p>
+        <p>
+          The default value for <code>order</code> is <code>0</code>. Negative
+          values are allowed.
+        </p>
+       
+      </details>
+
+      <div class="question">
+        <h3>17. What is <code>align-self</code> and when would you use it?</h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          The <code>align-self</code> property allows individual flex items to
+          override the <code>align-items</code> property set on the flex
+          container. It controls the alignment of a single flex item along the
+          <strong>cross axis</strong>.
+        </p>
+        <p>
+          It accepts the same values as <code>align-items</code> (<code
+            >auto</code
+          >
+          (default), <code>flex-start</code>, <code>flex-end</code>,
+          <code>center</code>, <code>baseline</code>, <code>stretch</code>).
+        </p>
+        <p>
+          It's useful when you have a general alignment for most items but need
+          to adjust one or a few items differently.
+        </p>
+      </details>
+
+      <div class="question">
+        <h3>
+          18. Can a flex item also be a flex container? Provide an example.
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>
+          Yes, absolutely! This is a fundamental concept in creating complex
+          layouts with Flexbox, often referred to as "nesting" flex containers.
+        </p>
+        <pre><code >&lt;div class=&quot;outer-flex-container&quot; style=&quot;display:flex;&quot;&gt; 
+    &lt;div class=&quot;flex-item-1&quot;&gt;Item1&lt;/div&gt; 
+    &lt;div class=&quot;flex-item-2inner-flex-container&quot; style=&quot;display: flex; flex-direction:column;&quot;&gt; 
+        &lt;div class=&quot;inner-item-A&quot;&gt;Inner A&lt;/div&gt; 
+        &lt;div class=&quot;inner-item-B&quot;&gt;Inner B&lt;/div&gt; 
+    &lt;/div&gt; 
+    &lt;div class=&quot;flex-item-3&quot;&gt;Item 3&lt;/div&gt; 
+&lt;/div&gt;</code></pre>
+        <p>
+          In this example, <code>.outer-flex-container</code> is a flex
+          container. <code>.flex-item-2</code> is a flex item within the outer
+          container, but it is also an <code>inner-flex-container</code>, which
+          in turn holds <code>.inner-item-A</code> and
+          <code>.inner-item-B</code> as its own flex items.
+        </p>
+      </details>
+
+      <div class="question">
+        <h3>
+          19. What are the advantages of using Flexbox over traditional layout
+          methods (floats, positioning)?
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <p>Advantages of Flexbox include:</p>
+        <ul>
+          <li>
+            <strong>Simplicity:</strong> Easier to create complex, dynamic
+            layouts with less code.
+          </li>
+          <li>
+            <strong>Responsiveness:</strong> Excellent for responsive design as
+            items can grow or shrink to fit the available space.
+          </li>
+          <li>
+            <strong>Alignment and Distribution:</strong> Powerful tools for
+            aligning and distributing space among items along either axis
+            (<code>justify-content</code>, <code>align-items</code>,
+            <code>align-content</code>).
+          </li>
+          <li>
+            <strong>Order Control:</strong> Ability to visually reorder items
+            using the <code>order</code> property without changing the HTML
+            source.
+          </li>
+          <li>
+            <strong>Centering:</strong> Effortless horizontal and vertical
+            centering.
+          </li>
+          <li>
+            <strong>No Floats or Clearfixes:</strong> Eliminates the need for
+            floats and the associated clearfix hacks, leading to cleaner markup.
+          </li>
+          <li>
+            <strong>Gap Property:</strong> Provides a clean way to add spacing
+            between flex items using the <code>gap</code> property (though it's
+            a newer addition and not supported in all older browsers).
+          </li>
+        </ul>
+      </details>
+
+      <div class="question">
+        <h3>
+          20. When would you choose CSS Grid over Flexbox, and vice-versa?
+        </h3>
+      </div>
+      <details class="answer">
+        <summary>Answer</summary>
+        <ul>
+          <li>
+            <strong>Choose Flexbox when:</strong>  when You need to lay out items in a
+            single dimension (either a row or a column).
+          </li>
+          <li>
+            <strong>Choose CSS Grid when:</strong> You need to lay out items in
+            two dimensions (rows and columns) simultaneously. It's ideal for
+            overall page layouts or complex sections where you want to
+            explicitly define grid lines and areas for content.
+          </li>
+        </ul>
+       
+      </details>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css functions references</title>
+    <style>
+       
+        .child{
+            height: 250px;
+            background-color: aqua;
+        }
+        code{
+            background-color: lightgray;
+        }
+        .child-1>p{
+            width:calc(200px);
+            font-size: calc(100% -20px);
+         
+        }
+        .child-2>p{
+            width: 400px;
+            height: 100px;
+            border: 1px solid black;
+             background: linear-gradient(45deg, red 0 50%, blue 50% 75%,yellow 0% 25%);
+        }
+        .child-3>p{
+         width: 400px;
+         height:100px;
+         background: radial-gradient(red ,blue);
+        }
+        .child-4>p{
+            width: 300px;
+            height:120px;
+            color:white;
+            font-size: 20px;
+            background-image: url("https://www.pixelstalk.net/wp-content/uploads/2016/07/Peaceful-Desktop-Backgrounds.jpeg");
+            place-content: center;
+        }
+        .child-5>p{
+            
+            width: 500px;
+            height: 100px;
+          background-color: rgb(200, 54, 54 );
+           
+        }
+        .child-6>p{
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            justify-content: center;
+            background: hsla(0.3turn 60% 45% / 0.7 );
+            
+        }
+        :root{
+            --primary-color:#ed12a8;
+            --secondary-color:#12ed57;
+            --text-color:#043908;
+            --border-radius:10px;
+            --padding:10px;
+        }
+       
+       .child-7> p{
+            background-color:var(--secondary-color);
+            border-radius: var(--border-radius);
+            padding: var(--padding);
+       }
+       .child-8>p{
+        width: min(150vw,100px);
+        font-size: min(1em, 50px);
+       }
+       .child-9>p{
+        width:max(50vw, 100px);
+        background-color: #12ed57;
+       
+       }
+       .child-10>p{
+        font-size: clamp(1.5rem,2.5vw, 2rem);
+        width: clamp(200px, 70%, 600px);
+        
+       }
+       .child-11>p::after{
+        display: block;
+         content: attr(data-label);
+      color: blue;
+        font-weight: bold;
+        
+       }
+       .child-13>p{
+       
+        background-color: #12ed57;
+        width: 100px;
+        height: 50px;
+         transform: translate(42px, 20px);
+
+       }
+       .child-14>p{
+       width: 200px;
+       margin-top: 50px;
+        text-align: center;
+        background-color: #12ed57;
+        transform: rotate(45deg);
+       }
+       .child-15>p{
+        text-align: center;
+        width: 500px;
+        background-color: yellow;
+        transform: scale( 3);
+       }
+       .child-16>p{
+        width: 300px;
+        text-align: center;
+        background-color: #ed12a8;
+        filter: blur(1px);
+       }
+       .child-17>p{
+        width: 200px;
+        text-align: center;
+        background-color: rgb(195, 118, 23);
+        filter: grayscale(0.7);
+       }
+       .child-18>p{
+        background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=color-depth-of-field-environment-1591447.jpg&fm=jpg);
+        width: 500px;
+        height: 150px;
+        color: white;
+        text-align: center;
+      /* filter: contrast(200%);-dark color black*/
+       filter:contrast(0.5);
+       }
+       .child-19>p{
+         background-image: url(https://images.pexels.com/photos/1591447/pexels-photo-1591447.jpeg?cs=srgb&dl=color-depth-of-field-environment-1591447.jpg&fm=jpg);
+         height: 200px;
+         color: white;
+         filter:brightness(150%)
+       }
+       .child-20>p{
+        width: 200px;
+        height: 100px;
+        background-color: #12ed57;
+        filter: saturate(25%);
+       }
+       .child-12>p{
+      width: 200px;
+        height: 100px;
+        background-color: #12ed57;
+       padding: env(safe-area-inset-right, 100px);
+       
+       }
+    </style>
+</head>
+<body>
+    <h1>CSS Functions References</h1>
+ </div>
+<div class="parent">
+    <div class="child child-1">
+        <h1><code>calc</code></h1>
+        <p>Lorem</p>
+    </div>
+    <div class="child child-2">
+        <h1><code>linear-gradient()</code></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, iure.</p>
+    </div>
+    <div class="child child-3">
+        <h1><code>radial-gradient()</code></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum, laborum.</p>
+    </div>
+    <div class="child child-4">
+        <h1><code>url()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, architecto?</p>
+    </div>
+    <div class="child child-5">
+        <h1><code>rgb(),rgba()</code></h1>
+        
+        <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cumque fugit recusandae minus quis id assumenda hic nostrum expedita, corporis adipisci eveniet facere blanditiis omnis ducimus laudantium distinctio saepe voluptate.</p>
+    </div>
+    <div class="child child-6">
+        <h1><code>hsl(),hsla()</code></h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, commodi.</p>
+    </div>
+    <div class="child child-7">
+        <h1><code>var()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, commodi!</p>
+    </div>
+    <div class="child child-8">
+        <h1><code>min()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, rem?</p>
+    </div>
+    <div class="child child-9">
+        <h1><code>max()</code></h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, atque!</p>
+    </div>
+    <div class="child child-10">
+        <h1><code>clamp()</code>:The function takes three parameters: a minimum value, a preferred value, and a maximum allowed value.</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe, eos.</p>
+    </div>
+    <div class="child child-11">
+        <h1><code>attr()</code></h1>
+       <p data-label="Hello world">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, inventore!</p>
+      
+    </div>
+    <div class="child child-12">
+        <h1><code>env()</code>:not understood this function </h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, ducimus?</p>
+    </div>
+    <div class="child child-13">
+        <h1><code>Translate()</code></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="child child-14">
+        <h1><code>rotate()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, autem!</p>
+    </div>
+    <div class="child child-15">
+        <h1><code>scale()</code></h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="child child-16">
+        <h1><code>blur()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, nostrum.</p>
+    </div>
+    <div class="child child-17">
+        <h1><code>grayscale()</code></h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, iure.
+        </p>
+    </div>
+    <div class="child child-18">
+        <h1><code>contrast()</code></h1>
+      <p>image here</p>
+    </div>
+    <div class="child child-19">
+        <h1><code>brightness()</code></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, nihil?</p>
+    </div>
+    <div class="child child-20">
+        <h1><code>saturate()</code></h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, beatae.</p>
+    </div>
+    
+    
+</div>
+</div>
+   
+</body>
+</html>

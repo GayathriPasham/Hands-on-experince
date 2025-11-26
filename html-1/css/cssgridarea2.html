@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercise1</title>
+   <!DOCTYPE html>Add commentMore actions
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Template Area Layout 1</title>
+  <style>
+    
+    
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(3, 100px);
+      gap: 10px;
+      grid-template-areas:
+        "h a a b"
+        "h c d e"
+        "h f g e";
+      width: 100%;
+      
+    }
+
+    .item {
+     display: flex;
+      align-items: center;
+      justify-content: center;
+      place-content: center;
+    }
+
+    .a { 
+        grid-area: a; 
+        background-color: green;
+        
+       
+    } 
+    .b { 
+        grid-area: b; 
+        background-color: red; 
+    } 
+    .c { 
+        grid-area: c; 
+        background-color:orange; 
+    } 
+    .d { 
+        grid-area: d; 
+        background-color:red; 
+    } 
+    .e { 
+        grid-area: e; 
+        background-color: green; 
+    } 
+    .f { 
+        grid-area: f; 
+        background-color: red; 
+    }  
+    .g { 
+        grid-area: g; 
+        background-color: orange; 
+    }  
+    .h { 
+        grid-area: h; 
+        background-color: green; 
+    }  
+  </style>
+</head>
+<body>
+
+  <div class="grid-container">
+    <div class="item a">A</div>
+    <div class="item b">B</div>
+    <div class="item c">C</div>
+    <div class="item d">D</div>
+    <div class="item e">E</div>
+    <div class="item f">F</div>
+    <div class="item g">G</div>
+    <div class="item h">H</div>
+  </div>
+
+</body>
+</html>

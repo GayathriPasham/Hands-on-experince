@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example3</title>
+    <style>
+        .grid-container{
+            background-color: aqua;
+            display: grid;
+            grid-template-columns: 1fr 2fr 3fr 1fr;
+            grid-template-rows: 10vh 10vh 10vh 10vh;
+            grid-template-areas: "a b c d"
+                                 "e  b c f"
+                                 "g h c j"
+                                 "k null c l"
+                                 ;
+                                        
+        }
+        .class{
+            padding: 10px;
+        }
+        .a{
+            grid-area: a;
+           background-color: aquamarine; 
+        }
+        .b{
+            grid-area:b;
+            background-color:rgb(198, 15, 198);
+        }
+        .c{
+            grid-area:c;
+            background-color: orange;
+        }
+        .d{
+            grid-area:d;
+            background-color: yellow;
+        }
+        .e{
+            grid-area:e;
+            background-color: green;
+        }
+        .f{
+            grid-area: f;
+            background-color: rgb(94, 69, 118);
+        }
+        .g{
+           grid-area:g;
+           background-color: greenyellow;
+        }
+        .h{
+            grid-area: h;
+            background-color: green;
+            width: 100px;
+        
+           
+        }
+        
+        
+        .j{
+            grid-area: j;
+            background-color: rgb(61, 120, 61);
+             
+            
+        }
+        .k{
+            grid-area: k;
+            background-color:red;
+           
+            
+            
+
+        }
+       .l{
+        grid-area: l;
+        background-color: brown;
+       }
+       .null{
+        grid-area: null;
+        background-color: red;
+       }
+       .i{
+        margin-left: 110px;
+        background-color: rgb(45, 30, 185);
+       }
+
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+    <div class="a">1</div>
+    <div class="b">2</div>
+    <div class="c">3
+        <h1>css grid layout</h1>
+    </div>
+    <div class="d">4</div>
+    <div class="e">5</div>
+    <div class="f">6</div>
+    <div class="g">7</div>
+    <div class="h">8
+       <div class="i">9</div>
+    </div>
+ 
+    <div class="j">10</div>
+    <div class="k">11</div>
+    <div class="null"></div>
+    <div class="l">12</div>
+    </div>
+</body>
+</html>
